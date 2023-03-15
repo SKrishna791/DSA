@@ -5,9 +5,11 @@ public class Main {
 
         int[] a = {2,9,8,3,0,1};
 
-        //bubbleSort(a);
+        // bubbleSort(a);
 
-        selectionSort(a);
+       // selectionSort(a);
+
+        insertionSort(a);
         System.out.println(Arrays.toString(a));
 
     }
@@ -40,6 +42,17 @@ public class Main {
                 int temp= array[i];
                 array[i]=array[minIndex];
                 array[minIndex]=temp;
+            }
+        }
+    }
+    public static void insertionSort(int[] array){
+        for (int i=1;i< array.length;i++){
+            int temp= array[i];
+            int j=i-1;
+            while (j > -1 && array[j]>temp){
+                array[j+1]=array[j];
+                array[j]=temp;
+                j--;
             }
         }
     }
